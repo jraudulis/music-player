@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Music player -->
+     <div id="player-container">
+        <div id="art-container">
+         <img src="images/jungle.jpg" alt="image of jungle leafs">
+        </div>
+        <h2>Jungle sounds</h2>
+        <h3>Artist unknown</h3>
+        <audio src="music/jungle.mp3" controls hidden></audio>
+        <!-- player control buttons -->
+        <div id="controls-container">
+            <div id="progress-bar"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration"></span>
+            </div>
+            <div id="player-controls-wrapper">
+                <i class="fas fa-backward" id="previous" title="backward"></i>
+                <i class="fas fa-play main-button" id="play" title="play"></i>
+                <i class="fas fa-forward" id="forward" title="forward"></i>
+            </div>
+        </div>
+    </div>
+         <!--Script-->
+    <script src="script.js"></script>
+</body>
+</html>
