@@ -1,5 +1,5 @@
 const image = document.querySelector('img');
-const controlsContainer = document.getElementById('controls-container')
+const progressBarContainer = document.getElementById('progressbar-container')
 const progressBar = document.getElementById('progress-bar');
 const currentTimeEle = document.getElementById('current-time');
 const durationTimeEle = document.getElementById('duration');
@@ -105,8 +105,17 @@ function updateProgressBar (event) {
         currentTimeEle.textContent = `${currentMinutes}:${currentSeconds}`;
     }
 }
+// Function for skipping time on progress bar
+function skipTimeOnProgresBar (event) {
+    const width = this.clientWidth;
+    const xOffsetLength = event.offsetX;
+    const { duration } = audioFile;
+    audioFile.currentTime = (xOffsetLength / width) * duration;
+
+};
 
 // Event listeners for controls panel
+progressBarContainer.addEventListener('click', skipTimeOnProgresBar);
 previousBtn.addEventListener('click', decrementSongIndex);
 forwardBtn.addEventListener('click', incrementSongIndex);
 audioFile.addEventListener('timeupdate', updateProgressBar);

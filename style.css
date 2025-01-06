@@ -47,7 +47,7 @@ h2, h3 {
     margin: 0;
 }
 
-#controls-container {
+#progressbar-container {
     background: #fff;
     border-radius: 5px;
     cursor: pointer;
@@ -57,6 +57,7 @@ h2, h3 {
 }
 
 #progress-bar{
+    z-index: 0;
     background: #242323;
     border-radius: 5px;
     height: 100%;
@@ -72,7 +73,8 @@ h2, h3 {
     justify-content: space-between;
 }
 
-#player-controls-wrapper {
+#player-controls-container {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
