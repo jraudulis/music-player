@@ -119,3 +119,4 @@ progressBarContainer.addEventListener('click', skipTimeOnProgresBar);
 previousBtn.addEventListener('click', decrementSongIndex);
 forwardBtn.addEventListener('click', incrementSongIndex);
 audioFile.addEventListener('timeupdate', updateProgressBar);
+audioFile.addEventListener('ended', incrementSongIndex);
